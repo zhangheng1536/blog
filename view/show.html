@@ -1,0 +1,20 @@
+{{define "show"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新文章</title>
+</head>
+<body>
+<input name="title" type="text" value="标题"/>:
+<input name="test" type="text" value="内容"/><br/>
+{{range .}}
+<input name="title" type="text" value="{{.Name}}"/>:
+<input name="test" type="text" value="{{.Value}}"/><br/>
+{{end}}
+
+<input type="button" onclick="location.href='/edit'" value="add"><br/>
+<input type="button" onclick="location.href='/show'" value="show">
+</body>
+</html>
+{{end}}
